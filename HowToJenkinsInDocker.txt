@@ -1,0 +1,17 @@
+Check Docker if installed or not
+Install Docker if not (How To Install Docker Search by yourself)
+
+if yes
+Pull Jenkins Versi LTS
+'docker pull jenkins/jenkins:lts'
+check jenkins already in docker run command
+'docker images
+Then Run
+'docker run -u root -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 -v $(which docker):/user/bin/docker -v /var/run/docker.sock:/var/run/docker.sock jenkins/jenkins:lts'
+To check container is running or not
+'docker container ls'
+stop jenkins run this command
+'docker stop <container name>'
+If Already done wala configure jenkins by yourself
+Search password in first setup jenkins could seen by running this command
+'docker logs <container name>'
