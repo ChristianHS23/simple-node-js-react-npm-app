@@ -1,10 +1,9 @@
 
 pipeline {
-
     environment {
         CI = 'true'
     }
-    stages {
+    node {
         stage('Build') {
             steps {
                 sh 'npm install'
